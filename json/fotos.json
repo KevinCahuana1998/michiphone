@@ -1,70 +1,86 @@
 [
   {
     "IdEquipo": 1,
-    "UrlFoto": "img/equipo1foto2.png"
+    "UrlFoto": "img/equipo1foto2.jpeg"
   },
   {
     "IdEquipo": 1,
-    "UrlFoto": "img/equipo1foto3.png"
+    "UrlFoto": "img/equipo1foto3.jpeg"
+  },
+  {
+    "IdEquipo": 1,
+    "UrlFoto": "img/equipo1foto4.jpeg"
+  },
+  {
+    "IdEquipo": 1,
+    "UrlFoto": "img/equipo1foto5.jpeg"
+  },
+  {
+    "IdEquipo": 1,
+    "UrlFoto": "img/equipo1foto6.jpeg"
+  },
+  {
+    "IdEquipo": 1,
+    "UrlFoto": "img/equipo1foto7.jpeg"
   },
   {
     "IdEquipo": 2,
-    "UrlFoto": "img/equipo2foto2.png"
+    "UrlFoto": "img/equipo2foto2.jpeg"
   },
   {
     "IdEquipo": 2,
-    "UrlFoto": "img/equipo2foto3.png"
+    "UrlFoto": "img/equipo2foto3.jpeg"
   },
   {
     "IdEquipo": 3,
-    "UrlFoto": "img/equipo3foto2.png"
+    "UrlFoto": "img/equipo3foto2.jpeg"
   },
   {
     "IdEquipo": 4,
-    "UrlFoto": "img/equipo4foto2.png"
+    "UrlFoto": "img/equipo4foto2.jpeg"
   },
   {
     "IdEquipo": 4,
-    "UrlFoto": "img/equipo4foto3.png"
+    "UrlFoto": "img/equipo4foto3.jpeg"
   },
   {
     "IdEquipo": 5,
-    "UrlFoto": "img/equipo5foto2.png"
+    "UrlFoto": "img/equipo5foto2.jpeg"
   },
   {
     "IdEquipo": 5,
-    "UrlFoto": "img/equipo5foto3.png"
+    "UrlFoto": "img/equipo5foto3.jpeg"
   },
   {
     "IdEquipo": 6,
-    "UrlFoto": "img/equipo6foto2.png"
+    "UrlFoto": "img/equipo6foto2.jpeg"
   },
   {
     "IdEquipo": 6,
-    "UrlFoto": "img/equipo6foto3.png"
+    "UrlFoto": "img/equipo6foto3.jpeg"
   },
   {
     "IdEquipo": 7,
-    "UrlFoto": "img/equipo7foto2.png"
+    "UrlFoto": "img/equipo7foto2.jpeg"
   },
   {
     "IdEquipo": 7,
-    "UrlFoto": "img/equipo7foto3.png"
+    "UrlFoto": "img/equipo7foto3.jpeg"
   },
   {
     "IdEquipo": 8,
-    "UrlFoto": "img/equipo8foto2.png"
+    "UrlFoto": "img/equipo8foto2.jpeg"
   },
   {
     "IdEquipo": 9,
-    "UrlFoto": "img/equipo9foto2.png"
+    "UrlFoto": "img/equipo9foto2.jpeg"
   },
   {
     "IdEquipo": 9,
-    "UrlFoto": "img/equipo9foto3.png"
+    "UrlFoto": "img/equipo9foto3.jpeg"
   },
   {
     "IdEquipo": 10,
-    "UrlFoto": "img/equipo10foto2.png"
+    "UrlFoto": "img/equipo10foto2.jpeg"
   }
 ]
