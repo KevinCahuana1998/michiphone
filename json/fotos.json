@@ -1,0 +1,70 @@
+[
+  {
+    "IdEquipo": 1,
+    "UrlFoto": "img/equipo1foto2.png"
+  },
+  {
+    "IdEquipo": 1,
+    "UrlFoto": "img/equipo1foto3.png"
+  },
+  {
+    "IdEquipo": 2,
+    "UrlFoto": "img/equipo2foto2.png"
+  },
+  {
+    "IdEquipo": 2,
+    "UrlFoto": "img/equipo2foto3.png"
+  },
+  {
+    "IdEquipo": 3,
+    "UrlFoto": "img/equipo3foto2.png"
+  },
+  {
+    "IdEquipo": 4,
+    "UrlFoto": "img/equipo4foto2.png"
+  },
+  {
+    "IdEquipo": 4,
+    "UrlFoto": "img/equipo4foto3.png"
+  },
+  {
+    "IdEquipo": 5,
+    "UrlFoto": "img/equipo5foto2.png"
+  },
+  {
+    "IdEquipo": 5,
+    "UrlFoto": "img/equipo5foto3.png"
+  },
+  {
+    "IdEquipo": 6,
+    "UrlFoto": "img/equipo6foto2.png"
+  },
+  {
+    "IdEquipo": 6,
+    "UrlFoto": "img/equipo6foto3.png"
+  },
+  {
+    "IdEquipo": 7,
+    "UrlFoto": "img/equipo7foto2.png"
+  },
+  {
+    "IdEquipo": 7,
+    "UrlFoto": "img/equipo7foto3.png"
+  },
+  {
+    "IdEquipo": 8,
+    "UrlFoto": "img/equipo8foto2.png"
+  },
+  {
+    "IdEquipo": 9,
+    "UrlFoto": "img/equipo9foto2.png"
+  },
+  {
+    "IdEquipo": 9,
+    "UrlFoto": "img/equipo9foto3.png"
+  },
+  {
+    "IdEquipo": 10,
+    "UrlFoto": "img/equipo10foto2.png"
+  }
+]

@@ -1,0 +1,557 @@
+/* ============================================
+   MichiPhone - Estilos de Detalle
+   ============================================ */
+
+/* --- Breadcrumb --- */
+.breadcrumb {
+  padding: 16px 0;
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+}
+
+.breadcrumb a {
+  color: var(--color-text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.breadcrumb a:hover {
+  color: var(--color-accent);
+}
+
+.breadcrumb .separator {
+  margin: 0 8px;
+  color: var(--color-border);
+}
+
+.breadcrumb .current {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+/* --- Product Detail Layout --- */
+.product-detail {
+  padding: 40px 0 60px;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 55% 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.detail-gallery {
+  position: sticky;
+  top: calc(var(--header-height) + 24px);
+  min-width: 0; /* Prevent grid blowout */
+}
+
+.detail-info {
+  min-width: 0; /* Prevent grid blowout */
+  padding-top: 8px;
+}
+
+/* ============================================
+   SLIDER PRINCIPAL
+   ============================================ */
+.gallery-main-wrapper {
+  border-radius: var(--radius-lg);
+  background-color: var(--color-bg-soft);
+  border: 1px solid var(--color-border-light);
+  margin-bottom: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* El contenedor que Slick maneja */
+.gallery-main {
+  width: 100%;
+}
+
+/* Cada slide */
+.gallery-main .slick-slide {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  height: 420px;
+  box-sizing: border-box;
+}
+
+.gallery-main .slick-slide img {
+  max-width: 100%;
+  max-height: 370px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Slick arrows en slider principal */
+.gallery-main .slick-prev,
+.gallery-main .slick-next {
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-radius: 50%;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-fast);
+}
+
+.gallery-main .slick-prev {
+  left: 12px;
+}
+
+.gallery-main .slick-next {
+  right: 12px;
+}
+
+.gallery-main .slick-prev:hover,
+.gallery-main .slick-next:hover {
+  background-color: #fff !important;
+  box-shadow: var(--shadow-lg);
+}
+
+.gallery-main .slick-prev::before,
+.gallery-main .slick-next::before {
+  color: var(--color-primary);
+  font-size: 16px;
+  opacity: 1;
+  line-height: 1;
+}
+
+/* Dots */
+.gallery-main .slick-dots {
+  bottom: 0px;
+  position: absolute;
+}
+
+.gallery-main .slick-dots li button::before {
+  font-size: 8px;
+  color: var(--color-text-light);
+  opacity: 1;
+}
+
+.gallery-main .slick-dots li.slick-active button::before {
+  color: var(--color-accent);
+  opacity: 1;
+}
+
+/* ============================================
+   THUMBNAILS
+   ============================================ */
+.gallery-thumbs-wrapper {
+  padding: 4px 0;
+}
+
+.gallery-thumbs .slick-slide {
+  padding: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+.gallery-thumbs .slick-slide > div {
+  outline: none;
+}
+
+.thumb-inner {
+  border: 2px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-bg-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 72px;
+  padding: 8px;
+  transition: border-color var(--transition-fast);
+  overflow: hidden;
+}
+
+.thumb-inner:hover {
+  border-color: var(--color-text-light);
+}
+
+.gallery-thumbs .slick-current .thumb-inner {
+  border-color: var(--color-accent);
+}
+
+.thumb-inner img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ============================================
+   IMAGEN ÚNICA (sin slider)
+   ============================================ */
+.gallery-single {
+  border-radius: var(--radius-lg);
+  background-color: var(--color-bg-soft);
+  border: 1px solid var(--color-border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  min-height: 380px;
+  overflow: hidden;
+}
+
+.gallery-single img {
+  max-width: 100%;
+  max-height: 380px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ============================================
+   INFORMACIÓN DEL PRODUCTO
+   ============================================ */
+.detail-model {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.detail-capacity {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 6px;
+}
+
+.detail-color {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.detail-color-label {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.detail-color-value {
+  color: var(--color-primary);
+  font-weight: 500;
+  background-color: var(--color-bg-soft);
+  padding: 2px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  font-size: 0.875rem;
+}
+
+/* Bloque de precios */
+.detail-pricing {
+  margin-bottom: 24px;
+  padding: 20px;
+  background-color: var(--color-bg-soft);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-light);
+}
+
+.detail-price-original {
+  font-size: 0.9375rem;
+  color: var(--color-text-light);
+  text-decoration: line-through;
+  margin-bottom: 4px;
+}
+
+.detail-price-offer {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.detail-price-normal {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.detail-discount-pill {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 12px;
+  background-color: var(--color-discount);
+  color: #fff;
+  border-radius: var(--radius-xl);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.detail-badge-liquidation {
+  display: inline-block;
+  margin-top: 8px;
+  margin-left: 8px;
+  padding: 4px 12px;
+  background-color: var(--color-liquidation);
+  color: #fff;
+  border-radius: var(--radius-xl);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* Descripción */
+.detail-description {
+  margin-bottom: 24px;
+}
+
+.detail-description h3 {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.detail-description p {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+/* Fecha */
+.detail-date {
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Botón WhatsApp */
+.btn-whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px 28px;
+  background-color: var(--color-success);
+  color: #fff;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  margin-bottom: 0;
+}
+
+.btn-whatsapp:hover {
+  background-color: #20bd5a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+  color: #fff;
+}
+
+.btn-whatsapp i {
+  font-size: 1.25rem;
+}
+
+/* Enlace volver */
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  transition: color var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-back:hover {
+  color: var(--color-accent);
+}
+
+/* ============================================
+   ESTADOS DE ERROR
+   ============================================ */
+.detail-error {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.detail-error i {
+  font-size: 3rem;
+  color: var(--color-text-light);
+  margin-bottom: 16px;
+  display: block;
+  opacity: 0.4;
+}
+
+.detail-error h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.detail-error p {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 24px;
+}
+
+.detail-error a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 24px;
+  background-color: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.detail-error a:hover {
+  background-color: #333;
+}
+
+/* ============================================
+   RESPONSIVE: Tablet (769px - 1100px)
+   ============================================ */
+@media (min-width: 769px) and (max-width: 1100px) {
+  .product-detail {
+    padding: 20px 0 60px;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .gallery-main .slick-slide {
+    height: 340px;
+  }
+
+  .gallery-main .slick-slide img {
+    max-height: 290px;
+  }
+
+  .detail-model {
+    font-size: 1.5rem;
+  }
+}
+
+/* ============================================
+   RESPONSIVE: Mobile (max 768px)
+   ============================================ */
+@media (max-width: 768px) {
+  .product-detail {
+    padding: 10px 0 60px;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .detail-gallery {
+    position: static;
+  }
+
+  .gallery-main .slick-slide {
+    height: 300px;
+    padding: 16px;
+  }
+
+  .gallery-main .slick-slide img {
+    max-height: 260px;
+  }
+
+  .gallery-single {
+    min-height: 280px;
+  }
+
+  .gallery-single img {
+    max-height: 260px;
+  }
+
+  .detail-model {
+    font-size: 1.375rem;
+  }
+
+  .detail-price-offer,
+  .detail-price-normal {
+    font-size: 1.5rem;
+  }
+
+  .detail-pricing {
+    padding: 16px;
+  }
+
+  .thumb-inner {
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-main .slick-slide {
+    height: 260px;
+    padding: 12px;
+  }
+
+  .gallery-main .slick-slide img {
+    max-height: 220px;
+  }
+
+  .gallery-single {
+    min-height: 240px;
+    padding: 16px;
+  }
+
+  .gallery-single img {
+    max-height: 220px;
+  }
+
+  .detail-model {
+    font-size: 1.25rem;
+  }
+
+  .detail-grid {
+    gap: 16px;
+  }
+
+  .breadcrumb {
+    padding: 12px 0;
+    font-size: 0.75rem;
+  }
+}
+
+/* ============================================
+   ANIMACIONES
+   ============================================ */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.detail-gallery {
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+.detail-info {
+  animation: fadeInUp 0.5s ease 0.1s both;
+}
