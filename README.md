@@ -153,4 +153,4 @@ Todas las librerías se cargan desde CDN, no requieren instalación.
 
 ## Contacto
 
-WhatsApp: [+51 904 099 012](https://wa.me/51922072450)
+WhatsApp: [+51 922 072 450](https://wa.me/51922072450)
