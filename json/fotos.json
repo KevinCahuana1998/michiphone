@@ -32,6 +32,14 @@
     "UrlFoto": "img/equipo2foto3.jpeg"
   },
   {
+    "IdEquipo": 2,
+    "UrlFoto": "img/equipo2foto4.jpeg"
+  },
+  {
+    "IdEquipo": 2,
+    "UrlFoto": "img/equipo2foto5.jpeg"
+  },
+  {
     "IdEquipo": 3,
     "UrlFoto": "img/equipo3foto2.jpeg"
   },
