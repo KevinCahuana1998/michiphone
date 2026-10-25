@@ -815,3 +815,44 @@ ul, ol {
 .product-card:nth-child(8) { animation-delay: 0.30s; }
 .product-card:nth-child(9) { animation-delay: 0.34s; }
 .product-card:nth-child(10) { animation-delay: 0.38s; }
+
+/* ============================================
+   FLOATING WHATSAPP BUTTON (Mobile only)
+   ============================================ */
+.fab-whatsapp {
+  display: none; /* Hidden by default on desktop */
+  position: fixed;
+  bottom: 24px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+  z-index: 999;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), opacity var(--transition-normal);
+  text-decoration: none;
+}
+
+.fab-whatsapp:hover {
+  background-color: #20bd5a;
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+  color: #fff;
+}
+
+.fab-whatsapp.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.6);
+}
+
+@media (max-width: 768px) {
+  .fab-whatsapp {
+    display: flex;
+  }
+}

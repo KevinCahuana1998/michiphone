@@ -208,6 +208,49 @@
     if (hasMultiplePhotos) {
       initSlickSlider(photos.length);
     }
+
+    // Update floating WhatsApp button URL to match product-specific message
+    var $fab = $('#fabWhatsapp');
+    if ($fab.length) {
+      $fab.attr('href', buildWhatsAppUrl(equipo));
+      initFabVisibility();
+    }
+  }
+
+  /**
+   * Show/hide the floating WhatsApp button based on whether
+   * the inline .btn-whatsapp is visible in the viewport.
+   */
+  function initFabVisibility() {
+    var $fab = $('#fabWhatsapp');
+    var $btnInline = null;
+
+    function checkVisibility() {
+      // Lazy-find the inline button (it's rendered dynamically)
+      if (!$btnInline || !$btnInline.length) {
+        $btnInline = $('.btn-whatsapp');
+      }
+      if (!$btnInline.length) return;
+
+      var rect = $btnInline[0].getBoundingClientRect();
+      var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+      // The inline button is visible if any part of it is within the viewport
+      var isVisible = rect.top < windowHeight && rect.bottom > 0;
+
+      if (isVisible) {
+        $fab.addClass('hidden');
+      } else {
+        $fab.removeClass('hidden');
+      }
+    }
+
+    // Check on scroll and resize
+    $(window).on('scroll', checkVisibility);
+    $(window).on('resize', checkVisibility);
+
+    // Initial check
+    checkVisibility();
   }
 
   /**
