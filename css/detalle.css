@@ -80,7 +80,7 @@
 
 .gallery-main .slick-slide img {
   max-width: 100%;
-  max-height: 370px;
+  max-height: 400px;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -101,11 +101,11 @@
 }
 
 .gallery-main .slick-prev {
-  left: 12px;
+  left: 0px;
 }
 
 .gallery-main .slick-next {
-  right: 12px;
+  right: 0px;
 }
 
 .gallery-main .slick-prev:hover,
@@ -124,7 +124,6 @@
 
 /* Dots */
 .gallery-main .slick-dots {
-  bottom: 0px;
   position: absolute;
 }
 
@@ -511,10 +510,6 @@
   .gallery-main .slick-slide {
     height: 260px;
     padding: 12px;
-  }
-
-  .gallery-main .slick-slide img {
-    max-height: 220px;
   }
 
   .gallery-single {
