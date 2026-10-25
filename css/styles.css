@@ -8,6 +8,7 @@
   --color-accent: #c9a84c;
   --color-accent-hover: #b8943f;
   --color-bg: #ffffff;
+  --color-bg-hero: #F3F4F6;
   --color-bg-soft: #f7f7f7;
   --color-bg-card: #ffffff;
   --color-text: #2c2c2c;
@@ -221,7 +222,7 @@ ul, ol {
    HERO SECTION
    ============================================ */
 .hero-section {
-  background-color: var(--color-bg-soft);
+  background-color: var(--color-bg-hero);
   padding: 48px 0 40px;
   text-align: center;
   border-bottom: 1px solid var(--color-border-light);
@@ -697,7 +698,7 @@ ul, ol {
 
   .header-nav a {
     font-size: 1rem;
-    padding: 8px 10px;
+    padding: 8px 20px;
   }
 
   .mobile-menu-btn {
