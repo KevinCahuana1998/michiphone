@@ -223,7 +223,7 @@ ul, ol {
    ============================================ */
 .hero-section {
   background-color: var(--color-bg-hero);
-  padding: 48px 0 40px;
+  padding: 30px 0 40px;
   text-align: center;
   border-bottom: 1px solid var(--color-border-light);
 }
