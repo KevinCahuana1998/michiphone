@@ -230,6 +230,9 @@
       speed: 400,
       cssEase: 'ease-in-out',
       adaptiveHeight: false,
+      swipe: false,       // Evita que Slick capture el gesto de deslizar en la principal
+      touchMove: false,   // Evita el movimiento táctil en la principal
+      draggable: false,   // Evita el arrastre con el mouse en la principal
       asNavFor: '#galleryThumbs',
       prevArrow: '<button type="button" class="slick-prev" aria-label="Foto anterior"><i class="fa-solid fa-chevron-left"></i></button>',
       nextArrow: '<button type="button" class="slick-next" aria-label="Foto siguiente"><i class="fa-solid fa-chevron-right"></i></button>'
@@ -243,6 +246,7 @@
       infinite: true,
       focusOnSelect: true,
       asNavFor: '#galleryMain',
+      // Las miniaturas conservan el swipe y drag por defecto para que puedas deslizarlas
       responsive: [
         {
           breakpoint: 480,
