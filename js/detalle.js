@@ -215,6 +215,9 @@
       $fab.attr('href', buildWhatsAppUrl(equipo));
       initFabVisibility();
     }
+
+    // Inicializar zoom (desktop) y lightbox (mobile) para la imagen principal
+    initImageInteractions();
   }
 
   /**
@@ -299,6 +302,177 @@
         }
       ]
     });
+  }
+
+  // --- Zoom & Lightbox para imagen principal ---
+
+  /**
+   * Detecta si el dispositivo es móvil/tablet (touch principal)
+   */
+  function isMobileOrTablet() {
+    return window.innerWidth <= 768;
+  }
+
+  /**
+   * DESKTOP: Zoom con lupa circular sobre la imagen principal.
+   * Se crea un div .zoom-lens que se posiciona donde está el cursor.
+   */
+  function initDesktopZoomLens() {
+    // Crear el elemento de la lupa si no existe
+    if ($('#zoomLens').length === 0) {
+      $('body').append('<div class="zoom-lens" id="zoomLens"></div>');
+    }
+
+    var $lens = $('#zoomLens');
+    var LENS_SIZE = 120;   // diámetro en px
+    var ZOOM_FACTOR =0.8; // magnification
+
+    // Seleccionar SOLO la imagen activa del slider principal o la imagen única
+    function getMainImage() {
+      var $active = $('#galleryMain .slick-active img');
+      if ($active.length) return $active;
+      var $single = $('.gallery-single img');
+      if ($single.length) return $single;
+      return null;
+    }
+
+    // Marcar imágenes principales como zoom-enabled
+    function markZoomImages() {
+      $('#galleryMain .slick-slide img').addClass('zoom-enabled');
+      $('.gallery-single img').addClass('zoom-enabled');
+    }
+
+    // Handler: mousemove sobre la imagen
+    function onMouseMove(e) {
+      if (isMobileOrTablet()) return;
+
+      var $img = $(e.target).closest('img.zoom-enabled');
+      if (!$img.length) { $lens.removeClass('active'); return; }
+
+      // Rectángulo de la imagen en el viewport
+      var rect = $img[0].getBoundingClientRect();
+
+      // Posición del cursor relativa a la imagen (0…1)
+      var relX = (e.clientX - rect.left) / rect.width;
+      var relY = (e.clientY - rect.top) / rect.height;
+
+      // Limitar a los bordes
+      if (relX < 0 || relX > 1 || relY < 0 || relY > 1) {
+        $lens.removeClass('active');
+        return;
+      }
+
+      // Obtener tamaño natural de la imagen
+      var natW = $img[0].naturalWidth || rect.width;
+      var natH = $img[0].naturalHeight || rect.height;
+
+      // Tamaño de fondo con zoom
+      var bgW = natW * ZOOM_FACTOR;
+      var bgH = natH * ZOOM_FACTOR;
+
+      // Posición del fondo para centrar el zoom en el cursor
+      var bgX = -(relX * bgW) + LENS_SIZE / 2;
+      var bgY = -(relY * bgH) + LENS_SIZE / 2;
+
+      $lens.css({
+        left: e.clientX + 'px',
+        top: e.clientY + 'px',
+        backgroundImage: 'url("' + $img.attr('src') + '")',
+        backgroundSize: bgW + 'px ' + bgH + 'px',
+        backgroundPosition: bgX + 'px ' + bgY + 'px'
+      }).addClass('active');
+    }
+
+    function onMouseLeave() {
+      $lens.removeClass('active');
+    }
+
+    // Delegamos en el contenedor de la galería para capturar dinámicamente
+    $detailContainer
+      .off('mousemove.zoomlens mouseleave.zoomlens')
+      .on('mousemove.zoomlens', '.gallery-main .slick-slide, .gallery-single', onMouseMove)
+      .on('mouseleave.zoomlens', '.gallery-main .slick-slide, .gallery-single', onMouseLeave);
+
+    // Ocultar la lupa cuando se cambia de slide
+    $(document).on('beforeChange', '#galleryMain', function () {
+      $lens.removeClass('active');
+    });
+
+    markZoomImages();
+  }
+
+  /**
+   * MOBILE / TABLET: Lightbox fullscreen al tocar la imagen principal.
+   * Permite pinch-to-zoom nativo en la imagen ampliada.
+   */
+  function initMobileLightbox() {
+    // Crear el overlay si no existe
+    if ($('#imageLightbox').length === 0) {
+      var overlayHtml =
+        '<div class="image-lightbox-overlay" id="imageLightbox">' +
+          '<button class="lightbox-close" aria-label="Cerrar">' +
+            '<i class="fa-solid fa-xmark"></i>' +
+          '</button>' +
+          '<div class="lightbox-img-wrapper">' +
+            '<img id="lightboxImg" src="" alt="Imagen ampliada">' +
+          '</div>' +
+          '<span class="lightbox-hint">Pellizca para hacer zoom · Toca fuera para cerrar</span>' +
+        '</div>';
+      $('body').append(overlayHtml);
+    }
+
+    var $overlay = $('#imageLightbox');
+    var $lightboxImg = $('#lightboxImg');
+
+    function openLightbox(imgSrc, altText) {
+      $lightboxImg.attr('src', imgSrc).attr('alt', altText || 'Imagen ampliada');
+      $overlay.addClass('active');
+      // Prevenir scroll del body
+      $('body').css('overflow', 'hidden');
+    }
+
+    function closeLightbox() {
+      $overlay.removeClass('active');
+      $('body').css('overflow', '');
+    }
+
+    // Abrir al tocar la imagen principal (solo mobile/tablet)
+    $detailContainer
+      .off('click.lightbox')
+      .on('click.lightbox', '.gallery-main .slick-slide img, .gallery-single img', function (e) {
+        if (!isMobileOrTablet()) return; // solo en móvil/tablet
+        e.preventDefault();
+        e.stopPropagation();
+        var $img = $(this);
+        openLightbox($img.attr('src'), $img.attr('alt'));
+      });
+
+    // Cerrar con el botón X
+    $overlay.off('click.lightboxClose').on('click.lightboxClose', '.lightbox-close', function () {
+      closeLightbox();
+    });
+
+    // Cerrar al tocar el overlay (fondo)
+    $overlay.off('click.lightboxBg').on('click.lightboxBg', function (e) {
+      if ($(e.target).is($overlay) || $(e.target).closest('.lightbox-hint').length) {
+        closeLightbox();
+      }
+    });
+
+    // Cerrar con tecla Escape
+    $(document).off('keydown.lightbox').on('keydown.lightbox', function (e) {
+      if (e.key === 'Escape' || e.keyCode === 27) {
+        closeLightbox();
+      }
+    });
+  }
+
+  /**
+   * Inicializar ambos sistemas después de renderizar el detalle
+   */
+  function initImageInteractions() {
+    initDesktopZoomLens();
+    initMobileLightbox();
   }
 
   // --- Error States ---
