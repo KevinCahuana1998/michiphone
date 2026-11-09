@@ -33,6 +33,28 @@
   padding: 40px 0 60px;
 }
 
+/* Sold banner in detail page */
+.detail-sold-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 24px;
+  margin-bottom: 20px;
+  background-color: var(--color-discount);
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(217, 64, 64, 0.25);
+}
+
+.detail-sold-banner i {
+  font-size: 1.25rem;
+}
+
 .detail-grid {
   display: grid;
   grid-template-columns: 55% 1fr;

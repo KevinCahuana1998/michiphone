@@ -49,9 +49,13 @@
    * Build WhatsApp URL with dynamic message
    */
   function buildWhatsAppUrl(equipo) {
-    var details = equipo.Modelo + ' de ' + equipo.Capacidad;
-    if (equipo.Color) {
-      details += ' (' + equipo.Color + ')';
+    var isPhone = equipo.Tipo === 'PHONE';
+    var details = equipo.Modelo;
+    if (isPhone) {
+      details += ' de ' + equipo.Capacidad;
+      if (equipo.Color) {
+        details += ' (' + equipo.Color + ')';
+      }
     }
     var message = 'Hola, estoy interesado en el ' + details + ' que vi en MichiPhone. ¿Sigue disponible?';
     return 'https://wa.me/51922072450?text=' + encodeURIComponent(message);
@@ -103,6 +107,8 @@
   function renderDetail(equipo, photos) {
     var hasDiscount = equipo.HayDescuento === true && equipo.PrecioOferta != null && !isNaN(equipo.PrecioOferta);
     var isLiquidation = equipo.EsLiquidacion === true;
+    var isSold = equipo.EnStock === false;
+    var isPhone = equipo.Tipo === 'PHONE';
     var hasMultiplePhotos = photos.length > 1;
 
     var html = '<div class="detail-grid">';
@@ -147,11 +153,18 @@
     // --- Right column: Info ---
     html += '<div class="detail-info">';
 
+    // Sold banner
+    if (isSold) {
+      html += '<div class="detail-sold-banner"><i class="fa-solid fa-ban"></i> VENDIDO</div>';
+    }
+
     // Model + Capacity + Color
     html += '<h1 class="detail-model">' + escapeHtml(equipo.Modelo) + '</h1>';
-    html += '<p class="detail-capacity">' + escapeHtml(equipo.Capacidad) + '</p>';
-    if (equipo.Color) {
-      html += '<p class="detail-color"><span class="detail-color-label">Color:</span> <span class="detail-color-value">' + escapeHtml(equipo.Color) + '</span></p>';
+    if (isPhone) {
+      html += '<p class="detail-capacity">' + escapeHtml(equipo.Capacidad) + '</p>';
+      if (equipo.Color) {
+        html += '<p class="detail-color"><span class="detail-color-label">Color:</span> <span class="detail-color-value">' + escapeHtml(equipo.Color) + '</span></p>';
+      }
     }
 
     // Pricing block
@@ -198,7 +211,7 @@
     $detailContainer.html(html);
 
     // Update page title
-    var fullTitle = equipo.Modelo + ' ' + equipo.Capacidad + (equipo.Color ? ' ' + equipo.Color : '');
+    var fullTitle = equipo.Modelo + (isPhone ? ' ' + equipo.Capacidad + (equipo.Color ? ' ' + equipo.Color : '') : '');
     document.title = fullTitle + ' — MichiPhone';
 
     // Update breadcrumb

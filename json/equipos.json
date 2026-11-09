@@ -2,6 +2,7 @@
   {
     "Id": 1,
     "Modelo": "iPhone 13",
+    "Tipo": "PHONE",
     "Capacidad": "256GB",
     "Color": "Starlight",
     "Precio": 1550.00,
@@ -9,13 +10,15 @@
     "HayDescuento": true,
     "PorcentajeDescuento": 7,
     "UrlFotoPrincipal": "img/equipo1foto1.jpeg",
-    "Descripcion": "Equipo impecable sin ningún detalle, cuenta con batería original al 100% y está registrado en la lista blanca. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
+    "Descripcion": "Equipo impecable sin ningún detalle, cuenta con batería original al 100%. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
     "FechaIngreso": "25/10/2026",
-    "EsLiquidacion": false
+    "EsLiquidacion": false,
+    "EnStock": true
   },
   {
     "Id": 2,
     "Modelo": "iPhone 13 Pro",
+    "Tipo": "PHONE",
     "Capacidad": "128GB",
     "Color": "Silver",
     "Precio": 1800.00,
@@ -25,11 +28,13 @@
     "UrlFotoPrincipal": "img/equipo2foto1.jpeg",
     "Descripcion": "Equipo seminuevo en excelentes condiciones, pantalla impecable sin ningún arañazo. Batería original y de fábrica al 99%. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
     "FechaIngreso": "25/10/2026",
-    "EsLiquidacion": false
+    "EsLiquidacion": false,
+    "EnStock": true
   },
   {
     "Id": 3,
     "Modelo": "iPhone 13 Pro",
+    "Tipo": "PHONE",
     "Capacidad": "512GB",
     "Color": "Sierra Blue",
     "Precio": 2000.00,
@@ -39,11 +44,13 @@
     "UrlFotoPrincipal": "img/equipo3foto1.jpeg",
     "Descripcion": "Equipo seminuevo en excelentes condiciones, pantalla impecable sin ningún arañazo. Batería nueva y original al 100%. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
     "FechaIngreso": "25/10/2026",
-    "EsLiquidacion": true
+    "EsLiquidacion": true,
+    "EnStock": true
   },
   {
     "Id": 4,
     "Modelo": "iPhone 14 Pro",
+    "Tipo": "PHONE",
     "Capacidad": "256GB",
     "Color": "Deep Purple",
     "Precio": 2150.00,
@@ -53,11 +60,13 @@
     "UrlFotoPrincipal": "img/equipo4foto1.jpeg",
     "Descripcion": "Equipo seminuevo en excelentes condiciones, pantalla impecable sin ningún arañazo. Batería original al 100%. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
     "FechaIngreso": "25/10/2026",
-    "EsLiquidacion": false
+    "EsLiquidacion": false,
+    "EnStock": true
   },
   {
     "Id": 5,
     "Modelo": "iPhone 14 Pro Max",
+    "Tipo": "PHONE",
     "Capacidad": "256GB",
     "Color": "Deep Purple",
     "Precio": 2600.00,
@@ -67,11 +76,13 @@
     "UrlFotoPrincipal": "img/equipo5foto1.jpeg",
     "Descripcion": "Equipo seminuevo en excelentes condiciones, pantalla impecable sin ningún arañazo. Batería original al 100% y ya registrado en lista blanca. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
     "FechaIngreso": "25/10/2026",
-    "EsLiquidacion": true
+    "EsLiquidacion": true,
+    "EnStock": true
   },
   {
     "Id": 6,
     "Modelo": "iPhone 13 Pro Max",
+    "Tipo": "PHONE",
     "Capacidad": "256GB",
     "Color": "Graphite",
     "Precio": 2200.00,
@@ -81,11 +92,13 @@
     "UrlFotoPrincipal": "img/equipo6foto1.jpeg",
     "Descripcion": "Equipo seminuevo en excelentes condiciones, pantalla impecable sin ningún arañazo. Batería original al 91%. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
     "FechaIngreso": "25/10/2026",
-    "EsLiquidacion": true
+    "EsLiquidacion": true,
+    "EnStock": true
   },
   {
     "Id": 7,
     "Modelo": "iPhone 13 Pro Max",
+    "Tipo": "PHONE",
     "Capacidad": "512GB",
     "Color": "Gold",
     "Precio": 2350.00,
@@ -95,11 +108,13 @@
     "UrlFotoPrincipal": "img/equipo7foto1.jpeg",
     "Descripcion": "Equipo seminuevo en excelentes condiciones, pantalla impecable sin ningún arañazo. Batería original al 100%. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
     "FechaIngreso": "26/10/2026",
-    "EsLiquidacion": false
+    "EsLiquidacion": false,
+    "EnStock": true
   },
   {
     "Id": 8,
     "Modelo": "iPhone 16 Pro",
+    "Tipo": "PHONE",
     "Capacidad": "256GB",
     "Color": "Black Titanium",
     "Precio": 2900.00,
@@ -109,11 +124,13 @@
     "UrlFotoPrincipal": "img/equipo8foto1.jpeg",
     "Descripcion": "Equipo seminuevo en excelentes condiciones con ligeros detalles estéticos. Batería original al 90% y ya registrado en lista blanca. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
     "FechaIngreso": "26/10/2026",
-    "EsLiquidacion": true
+    "EsLiquidacion": true,
+    "EnStock": false
   },
   {
     "Id": 9,
     "Modelo": "iPhone 13",
+    "Tipo": "PHONE",
     "Capacidad": "128GB",
     "Color": "Midnight",
     "Precio": 1550.00,
@@ -123,11 +140,13 @@
     "UrlFotoPrincipal": "img/equipo9foto1.jpeg",
     "Descripcion": "Equipo de exhibición sin ningún detalle estético (impecable). Batería original al 100% y ya registrado en lista blanca. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
     "FechaIngreso": "26/10/2026",
-    "EsLiquidacion": false
+    "EsLiquidacion": false,
+    "EnStock": true
   },
   {
     "Id": 10,
     "Modelo": "iPhone 15",
+    "Tipo": "PHONE",
     "Capacidad": "128GB",
     "Color": "Green",
     "Precio": 2200.00,
@@ -137,11 +156,13 @@
     "UrlFotoPrincipal": "img/equipo10foto1.jpeg",
     "Descripcion": "Equipo de exhibición sin ningún detalle estético (impecable). Es chip físico o ESIM virtual, con batería original al 100% y ya registrado en lista blanca. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
     "FechaIngreso": "26/10/2026",
-    "EsLiquidacion": false
+    "EsLiquidacion": false,
+    "EnStock": false
   },
   {
     "Id": 11,
     "Modelo": "iPhone 15 Pro Max",
+    "Tipo": "PHONE",
     "Capacidad": "256GB",
     "Color": "Blue Titanium",
     "Precio": 2950.00,
@@ -151,11 +172,13 @@
     "UrlFotoPrincipal": "img/equipo11foto1.jpeg",
     "Descripcion": "Equipo seminuevo con caja original con ligeros detalle estéticos. Es chip físico o ESIM virtual, con batería original al 88% y ya registrado en lista blanca. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
     "FechaIngreso": "26/10/2026",
-    "EsLiquidacion": true
+    "EsLiquidacion": true,
+    "EnStock": true
   },
   {
     "Id": 12,
     "Modelo": "iPhone 14 Pro",
+    "Tipo": "PHONE",
     "Capacidad": "256GB",
     "Color": "Silver",
     "Precio": 2400.00,
@@ -165,11 +188,13 @@
     "UrlFotoPrincipal": "img/equipo12foto1.jpeg",
     "Descripcion": "Equipo de exhibición sin ningún detalle estético (impecable). Es chip físico o ESIM virtual, con batería original al 100% y ya registrado en lista blanca. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
     "FechaIngreso": "26/10/2026",
-    "EsLiquidacion": false
+    "EsLiquidacion": false,
+    "EnStock": true
   },
   {
     "Id": 13,
     "Modelo": "iPhone 16 Pro Max",
+    "Tipo": "PHONE",
     "Capacidad": "256GB",
     "Color": "Desert Titanium",
     "Precio": 3450.00,
@@ -179,12 +204,13 @@
     "UrlFotoPrincipal": "img/equipo13foto1.jpeg",
     "Descripcion": "Equipo seminuevo con caja original en excelentes condiciones. Es chip físico o ESIM virtual, con batería original al 91% y ya registrado en lista blanca. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
     "FechaIngreso": "26/10/2026",
-    "EsLiquidacion": true
-  }
-  ,
+    "EsLiquidacion": true,
+    "EnStock": true
+  },
   {
     "Id": 14,
     "Modelo": "iPhone 16 Pro Max",
+    "Tipo": "PHONE",
     "Capacidad": "256GB",
     "Color": "Natural Titanium",
     "Precio": 3600.00,
@@ -194,6 +220,7 @@
     "UrlFotoPrincipal": "img/equipo14foto1.jpeg",
     "Descripcion": "Equipo de exhibición sin ningún detalle estético (impecable). Batería original al 92% y ya registrado en lista blanca. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
     "FechaIngreso": "26/10/2026",
-    "EsLiquidacion": false
+    "EsLiquidacion": false,
+    "EnStock": true
   }
 ]

@@ -70,9 +70,11 @@
   function buildCard(equipo) {
     var hasDiscount = equipo.HayDescuento === true && equipo.PrecioOferta != null && !isNaN(equipo.PrecioOferta);
     var isLiquidation = equipo.EsLiquidacion === true;
+    var isSold = equipo.EnStock === false;
+    var isPhone = equipo.Tipo === 'PHONE';
 
     var html = '';
-    html += '<article class="product-card">';
+    html += '<article class="product-card' + (isSold ? ' product-card--sold' : '') + '">';
 
     // Badges
     if (hasDiscount || isLiquidation) {
@@ -88,8 +90,13 @@
 
     // Image
     html += '<div class="card-image">';
+
+    // Sold overlay (inside card-image so it centers on the image)
+    if (isSold) {
+      html += '<div class="sold-overlay"><span class="sold-label">VENDIDO</span></div>';
+    }
     html += '<a href="detalle.html?id=' + encodeURIComponent(equipo.Id) + '" aria-label="Ver detalle de ' + escapeHtml(equipo.Modelo) + '">';
-    html += buildImageHtml(equipo.UrlFotoPrincipal, equipo.Modelo + ' - ' + equipo.Capacidad);
+    html += buildImageHtml(equipo.UrlFotoPrincipal, equipo.Modelo + (isPhone ? ' - ' + equipo.Capacidad : ''));
     html += '</a>';
     html += '</div>';
 
@@ -97,12 +104,14 @@
     html += '<div class="card-body">';
     html += '<div class="card-info">';
 
-    // Left: model + capacity + color
+    // Left: model + capacity + color (capacity and color only for PHONE type)
     html += '<div class="card-details">';
     html += '<h3 class="card-model"><a href="detalle.html?id=' + encodeURIComponent(equipo.Id) + '">' + escapeHtml(equipo.Modelo) + '</a></h3>';
-    html += '<p class="card-capacity">' + escapeHtml(equipo.Capacidad) + '</p>';
-    if (equipo.Color) {
-      html += '<p class="card-color"><i class="fa-solid fa-palette"></i> ' + escapeHtml(equipo.Color) + '</p>';
+    if (isPhone) {
+      html += '<p class="card-capacity">' + escapeHtml(equipo.Capacidad) + '</p>';
+      if (equipo.Color) {
+        html += '<p class="card-color"><i class="fa-solid fa-palette"></i> ' + escapeHtml(equipo.Color) + '</p>';
+      }
     }
     html += '</div>';
 
