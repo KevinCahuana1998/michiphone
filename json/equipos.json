@@ -1,5 +1,23 @@
 [
   {
+    "Id": 15,
+    "Modelo": "iPhone 13",
+    "Tipo": "PHONE",
+    "Capacidad": "128GB",
+    "Color": "Starlight",
+    "Precio": 1400.00,
+    "PrecioOferta": 1350.00,
+    "HayDescuento": true,
+    "PorcentajeDescuento": 0,
+    "UrlFotoPrincipal": "img/equipo1foto1.jpeg",
+    "Descripcion": "Equipo impecable sin ningún detalle, cuenta con batería original al 100%. Incluye accesorios de regalo, case, mica, cable y cubo de carga. Ya registrado en lista blanca para que solo coloques tu chip.",
+    "FechaIngreso": "10/11/2026",
+    "EsLiquidacion": false,
+    "EnStock": true,
+    "EsVisible": true,
+    "Orden": 1
+  },
+  {
     "Id": 1,
     "Modelo": "iPhone 13",
     "Tipo": "PHONE",
@@ -11,9 +29,11 @@
     "PorcentajeDescuento": 7,
     "UrlFotoPrincipal": "img/equipo1foto1.jpeg",
     "Descripcion": "Equipo impecable sin ningún detalle, cuenta con batería original al 100%. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
-    "FechaIngreso": "25/10/2026",
+    "FechaIngreso": "10/11/2026",
     "EsLiquidacion": false,
-    "EnStock": true
+    "EnStock": true,
+    "EsVisible": true,
+    "Orden": 4
   },
   {
     "Id": 2,
@@ -27,9 +47,11 @@
     "PorcentajeDescuento": 0,
     "UrlFotoPrincipal": "img/equipo2foto1.jpeg",
     "Descripcion": "Equipo seminuevo en excelentes condiciones, pantalla impecable sin ningún arañazo. Batería original y de fábrica al 99%. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
-    "FechaIngreso": "25/10/2026",
+    "FechaIngreso": "10/11/2026",
     "EsLiquidacion": false,
-    "EnStock": true
+    "EnStock": true,
+    "EsVisible": true,
+    "Orden": 10
   },
   {
     "Id": 3,
@@ -43,9 +65,11 @@
     "PorcentajeDescuento": 8,
     "UrlFotoPrincipal": "img/equipo3foto1.jpeg",
     "Descripcion": "Equipo seminuevo en excelentes condiciones, pantalla impecable sin ningún arañazo. Batería nueva y original al 100%. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
-    "FechaIngreso": "25/10/2026",
+    "FechaIngreso": "10/11/2026",
     "EsLiquidacion": true,
-    "EnStock": true
+    "EnStock": true,
+    "EsVisible": true,
+    "Orden": 14
   },
   {
     "Id": 4,
@@ -59,9 +83,11 @@
     "PorcentajeDescuento": 0,
     "UrlFotoPrincipal": "img/equipo4foto1.jpeg",
     "Descripcion": "Equipo seminuevo en excelentes condiciones, pantalla impecable sin ningún arañazo. Batería original al 100%. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
-    "FechaIngreso": "25/10/2026",
+    "FechaIngreso": "10/11/2026",
     "EsLiquidacion": false,
-    "EnStock": true
+    "EnStock": true,
+    "EsVisible": true,
+    "Orden": 30
   },
   {
     "Id": 5,
@@ -75,9 +101,11 @@
     "PorcentajeDescuento": 8,
     "UrlFotoPrincipal": "img/equipo5foto1.jpeg",
     "Descripcion": "Equipo seminuevo en excelentes condiciones, pantalla impecable sin ningún arañazo. Batería original al 100% y ya registrado en lista blanca. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
-    "FechaIngreso": "25/10/2026",
+    "FechaIngreso": "10/11/2026",
     "EsLiquidacion": true,
-    "EnStock": true
+    "EnStock": true,
+    "EsVisible": true,
+    "Orden": 40
   },
   {
     "Id": 6,
@@ -91,9 +119,11 @@
     "PorcentajeDescuento": 7,
     "UrlFotoPrincipal": "img/equipo6foto1.jpeg",
     "Descripcion": "Equipo seminuevo en excelentes condiciones, pantalla impecable sin ningún arañazo. Batería original al 91%. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
-    "FechaIngreso": "25/10/2026",
+    "FechaIngreso": "10/11/2026",
     "EsLiquidacion": true,
-    "EnStock": true
+    "EnStock": true,
+    "EsVisible": true,
+    "Orden": 20
   },
   {
     "Id": 7,
@@ -107,9 +137,11 @@
     "PorcentajeDescuento": 0,
     "UrlFotoPrincipal": "img/equipo7foto1.jpeg",
     "Descripcion": "Equipo seminuevo en excelentes condiciones, pantalla impecable sin ningún arañazo. Batería original al 100%. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
-    "FechaIngreso": "26/10/2026",
+    "FechaIngreso": "12/11/2026",
     "EsLiquidacion": false,
-    "EnStock": true
+    "EnStock": true,
+    "EsVisible": true,
+    "Orden": 25
   },
   {
     "Id": 8,
@@ -123,9 +155,11 @@
     "PorcentajeDescuento": 9,
     "UrlFotoPrincipal": "img/equipo8foto1.jpeg",
     "Descripcion": "Equipo seminuevo en excelentes condiciones con ligeros detalles estéticos. Batería original al 90% y ya registrado en lista blanca. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
-    "FechaIngreso": "26/10/2026",
+    "FechaIngreso": "12/11/2026",
     "EsLiquidacion": true,
-    "EnStock": false
+    "EnStock": false,
+    "EsVisible": true,
+    "Orden": 70
   },
   {
     "Id": 9,
@@ -139,9 +173,11 @@
     "PorcentajeDescuento": 7,
     "UrlFotoPrincipal": "img/equipo9foto1.jpeg",
     "Descripcion": "Equipo de exhibición sin ningún detalle estético (impecable). Batería original al 100% y ya registrado en lista blanca. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
-    "FechaIngreso": "26/10/2026",
+    "FechaIngreso": "12/11/2026",
     "EsLiquidacion": false,
-    "EnStock": true
+    "EnStock": true,
+    "EsVisible": true,
+    "Orden": 3
   },
   {
     "Id": 10,
@@ -155,9 +191,11 @@
     "PorcentajeDescuento": 0,
     "UrlFotoPrincipal": "img/equipo10foto1.jpeg",
     "Descripcion": "Equipo de exhibición sin ningún detalle estético (impecable). Es chip físico o ESIM virtual, con batería original al 100% y ya registrado en lista blanca. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
-    "FechaIngreso": "26/10/2026",
+    "FechaIngreso": "12/11/2026",
     "EsLiquidacion": false,
-    "EnStock": false
+    "EnStock": false,
+    "EsVisible": true,
+    "Orden": 45
   },
   {
     "Id": 11,
@@ -171,9 +209,11 @@
     "PorcentajeDescuento": 14,
     "UrlFotoPrincipal": "img/equipo11foto1.jpeg",
     "Descripcion": "Equipo seminuevo con caja original con ligeros detalle estéticos. Es chip físico o ESIM virtual, con batería original al 88% y ya registrado en lista blanca. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
-    "FechaIngreso": "26/10/2026",
+    "FechaIngreso": "12/11/2026",
     "EsLiquidacion": true,
-    "EnStock": true
+    "EnStock": true,
+    "EsVisible": true,
+    "Orden": 60
   },
   {
     "Id": 12,
@@ -182,14 +222,16 @@
     "Capacidad": "256GB",
     "Color": "Silver",
     "Precio": 2400.00,
-    "PrecioOferta": 2350.00,
+    "PrecioOferta": 2300.00,
     "HayDescuento": true,
     "PorcentajeDescuento": 0,
     "UrlFotoPrincipal": "img/equipo12foto1.jpeg",
-    "Descripcion": "Equipo de exhibición sin ningún detalle estético (impecable). Es chip físico o ESIM virtual, con batería original al 100% y ya registrado en lista blanca. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
-    "FechaIngreso": "26/10/2026",
+    "Descripcion": "Equipo de exhibición sin ningún detalle estético (impecable). Es chip físico y/o ESIM virtual, con batería original al 100% y ya registrado en lista blanca. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
+    "FechaIngreso": "12/11/2026",
     "EsLiquidacion": false,
-    "EnStock": true
+    "EnStock": true,
+    "EsVisible": true,
+    "Orden": 36
   },
   {
     "Id": 13,
@@ -203,9 +245,11 @@
     "PorcentajeDescuento": 8,
     "UrlFotoPrincipal": "img/equipo13foto1.jpeg",
     "Descripcion": "Equipo seminuevo con caja original en excelentes condiciones. Es chip físico o ESIM virtual, con batería original al 91% y ya registrado en lista blanca. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
-    "FechaIngreso": "26/10/2026",
+    "FechaIngreso": "12/11/2026",
     "EsLiquidacion": true,
-    "EnStock": true
+    "EnStock": true,
+    "EsVisible": true,
+    "Orden": 75
   },
   {
     "Id": 14,
@@ -214,13 +258,69 @@
     "Capacidad": "256GB",
     "Color": "Natural Titanium",
     "Precio": 3600.00,
-    "PrecioOferta": 3500.00,
+    "PrecioOferta": 3400.00,
     "HayDescuento": true,
-    "PorcentajeDescuento": 8,
+    "PorcentajeDescuento": 6,
     "UrlFotoPrincipal": "img/equipo14foto1.jpeg",
     "Descripcion": "Equipo de exhibición sin ningún detalle estético (impecable). Batería original al 92% y ya registrado en lista blanca. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
-    "FechaIngreso": "26/10/2026",
+    "FechaIngreso": "12/11/2026",
     "EsLiquidacion": false,
-    "EnStock": true
+    "EnStock": true,
+    "EsVisible": true,
+    "Orden": 79
+  },
+  {
+    "Id": 16,
+    "Modelo": "iPhone 15 Pro",
+    "Tipo": "PHONE",
+    "Capacidad": "256GB",
+    "Color": "Black Titanium",
+    "Precio": 2550.00,
+    "PrecioOferta": 2450,
+    "HayDescuento": true,
+    "PorcentajeDescuento": 0,
+    "UrlFotoPrincipal": "img/equipo16foto1.jpeg",
+    "Descripcion": "Equipo seminuevo en excelentes condiciones, sin ninguna abolladura o golpe. Batería original al 100%. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
+    "FechaIngreso": "15/11/2026",
+    "EsLiquidacion": false,
+    "EnStock": true,
+    "EsVisible": true,
+    "Orden": 50
+  },
+  {
+    "Id": 4,
+    "Modelo": "iPhone 14 Pro",
+    "Tipo": "PHONE",
+    "Capacidad": "512GB",
+    "Color": "Deep Purple",
+    "Precio": 23000.00,
+    "PrecioOferta": 2200,
+    "HayDescuento": true,
+    "PorcentajeDescuento": 0,
+    "UrlFotoPrincipal": "img/equipo4foto1.jpeg",
+    "Descripcion": "Equipo seminuevo en excelentes condiciones, pantalla impecable sin ningún arañazo. Batería original al 100%. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
+    "FechaIngreso": "10/11/2026",
+    "EsLiquidacion": false,
+    "EnStock": true,
+    "EsVisible": true,
+    "Orden": 35
+  },
+  {
+    "Id": 19,
+    "Modelo": "iPhone 18 Pro Max",
+    "Tipo": "PHONE",
+    "Capacidad": "256GB",
+    "Color": "Burgundy",
+    "Precio": 6000.00,
+    "PrecioOferta": 5850.00,
+    "HayDescuento": true,
+    "PorcentajeDescuento": 6,
+    "UrlFotoPrincipal": "img/equipo19foto1.jpeg",
+    "Descripcion": "Equipo nuevo y sellado. Incluye accesorios de regalo, cable y cubo de carga.",
+    "FechaIngreso": "12/11/2026",
+    "EsLiquidacion": false,
+    "EnStock": true,
+    "EsVisible": true,
+    "Orden": 100
   }
 ]

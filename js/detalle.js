@@ -67,37 +67,47 @@
    * Collect all unique photos for an equipment
    */
   function collectPhotos(equipo, fotosData) {
-    var photos = [];
-    var seen = {};
+  var photos = [];
+  var seen = {};
 
-    // First: main photo
-    if (isValidImagePath(equipo.UrlFotoPrincipal)) {
-      var mainUrl = equipo.UrlFotoPrincipal.trim();
-      photos.push(mainUrl);
-      seen[mainUrl] = true;
-    }
+  // 1. Primero: foto principal
+  if (isValidImagePath(equipo.UrlFotoPrincipal)) {
+    var mainUrl = equipo.UrlFotoPrincipal.trim();
+    photos.push(mainUrl);
+    seen[mainUrl] = true;
+  }
 
-    // Then: additional photos from fotos.json
-    if (Array.isArray(fotosData)) {
-      for (var i = 0; i < fotosData.length; i++) {
-        var foto = fotosData[i];
-        if (foto.IdEquipo === equipo.Id && isValidImagePath(foto.UrlFoto)) {
-          var url = foto.UrlFoto.trim();
-          if (!seen[url]) {
-            photos.push(url);
-            seen[url] = true;
+  // 2. Luego: fotos adicionales desde el nuevo formato de fotosData
+  if (Array.isArray(fotosData)) {
+    for (var i = 0; i < fotosData.length; i++) {
+      var record = fotosData[i];
+      
+      // Verificamos si el registro corresponde al equipo y tiene UrlsFoto
+      if (record.IdEquipo === equipo.Id && typeof record.UrlsFoto === 'string') {
+        // Separamos la cadena por comas
+        var urlList = record.UrlsFoto.split(',');
+        
+        for (var j = 0; j < urlList.length; j++) {
+          var url = urlList[j].trim();
+          
+          if (isValidImagePath(url)) {
+            if (!seen[url]) {
+              photos.push(url);
+              seen[url] = true;
+            }
           }
         }
       }
     }
-
-    // If no valid photos found, use the default photo
-    if (photos.length === 0) {
-      photos.push(DEFAULT_IMAGE);
-    }
-
-    return photos;
   }
+
+  // 3. Si no se encontró ninguna foto válida, se usa la imagen por defecto
+  if (photos.length === 0) {
+    photos.push(DEFAULT_IMAGE);
+  }
+
+  return photos;
+}
 
   // --- Render ---
 

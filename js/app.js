@@ -308,7 +308,11 @@
           return;
         }
 
-        equipos = data;
+        equipos = data.filter(function (item) {
+          return item.EsVisible === true;
+        }).sort(function (a, b) {
+          return a.Orden - b.Orden;
+        });
         filteredEquipos = equipos.slice();
 
         if (equipos.length === 0) {

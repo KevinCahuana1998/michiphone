@@ -73,7 +73,7 @@ Las imágenes de los equipos deben colocarse en la carpeta `img/`.
 Cada equipo referencia sus fotos desde los archivos JSON:
 
 - **`equipos.json`**: contiene `UrlFotoPrincipal` (ej: `img/equipo1foto1.png`).
-- **`fotos.json`**: contiene fotos adicionales con `UrlFoto` (ej: `img/equipo1foto2.png`).
+- **`fotos.json`**: contiene fotos adicionales con `UrlsFoto` (ej: `img/equipo1foto2.png`).
 
 ### Convención de nombres
 
@@ -101,27 +101,31 @@ Coloca el logo como `img/logo-michiphone.png`. Si no existe, se muestra el texto
 **equipos.json:**
 ```json
 {
-  "Id": 11,
-  "Modelo": "iPhone 16",
-  "Capacidad": "256GB",
-  "Color": "Negro",
-  "Precio": 600.00,
-  "PrecioOferta": 540.00,
-  "HayDescuento": true,
-  "PorcentajeDescuento": 10,
-  "UrlFotoPrincipal": "img/equipo11foto1.png",
-  "Descripcion": "Equipo nuevo, sellado. Incluye garantía de 12 meses.",
-  "FechaIngreso": "20/10/2026",
-  "EsLiquidacion": false
-}
+    "Id": 1,
+    "Modelo": "iPhone 13",
+    "Tipo": "PHONE",
+    "Capacidad": "128GB",
+    "Color": "Starlight",
+    "Precio": 1350.00,
+    "PrecioOferta": 1400.00,
+    "HayDescuento": false,
+    "PorcentajeDescuento": 7,
+    "UrlFotoPrincipal": "img/equipo1foto1.jpeg",
+    "Descripcion": "Equipo impecable sin ningún detalle.",
+    "FechaIngreso": "10/11/2026",
+    "EsLiquidacion": false,
+    "EnStock": true,
+    "EsVisible": true,
+    "Orden": 1
+  }
 ```
 
 **fotos.json:**
 ```json
 {
-  "IdEquipo": 11,
-  "UrlFoto": "img/equipo11foto2.png"
-}
+    "IdEquipo": 1,
+    "UrlsFoto": "img/equipo1foto2.jpeg, img/equipo1foto3.jpeg, img/equipo1foto4.jpeg"
+  }
 ```
 
 ## Tecnologías utilizadas
