@@ -103,7 +103,7 @@
     "Descripcion": "Equipo seminuevo en excelentes condiciones, pantalla impecable sin ningún arañazo. Batería original al 100% y ya registrado en lista blanca. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
     "FechaIngreso": "10/11/2026",
     "EsLiquidacion": true,
-    "EnStock": true,
+    "EnStock": false,
     "EsVisible": true,
     "Orden": 40
   },
@@ -247,7 +247,7 @@
     "Descripcion": "Equipo seminuevo con caja original en excelentes condiciones. Es chip físico o ESIM virtual, con batería original al 91% y ya registrado en lista blanca. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
     "FechaIngreso": "12/11/2026",
     "EsLiquidacion": true,
-    "EnStock": true,
+    "EnStock": false,
     "EsVisible": true,
     "Orden": 75
   },
