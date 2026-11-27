@@ -229,7 +229,7 @@
     "Descripcion": "Equipo de exhibición sin ningún detalle estético (impecable). Es chip físico y/o ESIM virtual, con batería original al 100% y ya registrado en lista blanca. Incluye accesorios de regalo, case, mica, cable y cubo de carga.",
     "FechaIngreso": "12/11/2026",
     "EsLiquidacion": false,
-    "EnStock": true,
+    "EnStock": false,
     "EsVisible": true,
     "Orden": 36
   },
